@@ -60,7 +60,7 @@ const Login = () => {
           </p>
 
           {/* Section de colocar o email */}
-          <input id="email" type="email" value="email" onChange={(e) => setEmail(e.target.value)} className='w-full rounded-full border border-gray-300 px-4 py-2' placeholder='Digite seu e-mail' />
+          <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} className='w-full rounded-full border border-gray-300 px-4 py-2' placeholder='Digite seu e-mail' />
 
           {/* texto acima da senha */}
           <p>
@@ -68,7 +68,7 @@ const Login = () => {
           </p>
 
           {/* Section de colocar a senha */}
-          <input id="password" type="password" value="password" onChange={(e) => setPassword(e.target.value)} className='w-full rounded-full border border-gray-300 px-4 py-2' placeholder='Digite sua senha' />
+          <input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} className='w-full rounded-full border border-gray-300 px-4 py-2' placeholder='Digite sua senha' />
 
           {/* famoso "esqueceu a senha?? FODA-SE*/}
           <p>
@@ -91,7 +91,10 @@ const Login = () => {
           onClick={() => console.log("Login com Google")} 
           className="flex items-center justify-center gap-3 w-full border border-gray-300 py-3 rounded-full hover:bg-gray-100 transition-all"
         >
-
+          <img src={googleLogo} alt="Google" className="h-6" />
+          <span className="font-lato text-gray-600">
+            Entrar com Google
+          </span>
         </button>
 
         {/* fazer a conta */}

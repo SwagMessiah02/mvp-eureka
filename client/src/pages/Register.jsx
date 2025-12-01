@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import googleLogo from "../assets/images/google.png";
 
 const Register = () => {
   return ( 
@@ -12,7 +11,7 @@ const Register = () => {
         {/* Imagem do eureka */}
         <img 
           className='h-18'
-          src="images/Logo.png"
+          src="../src/assets/images/Logo.png"
           alt="Logo Eureka"
         />
 
@@ -54,19 +53,6 @@ const Register = () => {
 
         {/* fim do formulario */}
         </form>
-
-        {/* Botão Login com Google */}
-        <button
-          /* onClick - é para testar se o botão funciona ( -- funciona :) -- ) */
-          onClick={() => console.log("Login com Google")} 
-          className="flex items-center justify-center gap-3 w-full border border-gray-300 py-3 rounded-full hover:bg-gray-100 transition-all"
-        >
-          <img src={googleLogo} alt="Google" className="w-6 h-6" />
-          <span className="font-lato text-gray-700 font-medium">
-            Registe-se com Google
-          </span>
-        </button>
-
       </div>
     </section>
   );
