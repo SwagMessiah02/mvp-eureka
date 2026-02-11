@@ -46,7 +46,7 @@ class UserController {
 
             res.status(200).json({user: user, acess_token: token});
         } catch {
-            throw ApiError.notFound("Unable to login now. Please try later.");
+            //throw ApiError.notFound("Unable to login now. Please try later.");
         }
     }
 
