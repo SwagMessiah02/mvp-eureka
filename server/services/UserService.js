@@ -33,13 +33,13 @@ class UserService {
 
     getUser = async (userdata) => {
         if(!userdata.email || !userdata.password) {
-            //throw ApiError.badRequest('All fields are required');
+            throw ApiError.badRequest('All fields are required');
         }
 
         const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
         if(!regexEmail.test(userdata.email)) {
-            //throw ApiError.badRequest('Invalid Email');
+            throw ApiError.badRequest('Invalid Email');
         }
 
         const user = await this.usermodel.findOne({email: userdata.email});
@@ -47,7 +47,7 @@ class UserService {
         console.log({email: user?.email, password: user?.senha});
 
         if(userdata.password != user?.senha || userdata.email != user?.email) {
-           // throw ApiError.unauthorized('Invalid email or password');
+           throw ApiError.unauthorized('Invalid email or password');
         }
 
         return user;
