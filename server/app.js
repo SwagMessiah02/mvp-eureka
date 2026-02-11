@@ -10,7 +10,7 @@ const app = express();
 
 app.use(json());
 app.use(cors({
-    origin: "https://mvp-eureka-1.onrender.com",
+    origin: "*",
     credentials: true
 }));
 
